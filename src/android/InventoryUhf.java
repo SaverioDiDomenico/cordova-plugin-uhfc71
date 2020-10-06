@@ -28,15 +28,17 @@ public class InventoryUhf {
 		loopFlag = false;
 		listaTags = new ArrayList<String>();
 
+		Toast.makeText(webView.getContext(), "instanzio", Toast.LENGTH_LONG).show();
 		try {
 			mReader = RFIDWithUHF.getInstance();
 		} catch (Exception ex) {
-
+			Toast.makeText(webView.getContext(), ex.toString(), Toast.LENGTH_LONG).show();
 		}
+		Toast.makeText(webView.getContext(), "potenza", Toast.LENGTH_LONG).show();
 		try {
 			mReader.setPower((int) txpower);
 		} catch (Exception ex) {
-
+			Toast.makeText(webView.getContext(), ex.toString(), Toast.LENGTH_LONG).show();
 		}
 
 		tagList = new ArrayList<HashMap<String, String>>();
