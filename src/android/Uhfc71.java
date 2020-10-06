@@ -26,9 +26,9 @@ public class Uhfc71 extends CordovaPlugin {
 		try {
 			 Context context = this.cordova.getActivity().getApplicationContext();
 			
-			Toast.makeText(webView.getContext(), "Costruttore", Toast.LENGTH_LONG).show();
+			//Toast.makeText(webView.getContext(), "Costruttore", Toast.LENGTH_LONG).show();
 			InventoryUhf iu = new InventoryUhf(context, txpower);
-			Toast.makeText(webView.getContext(), "Start", Toast.LENGTH_LONG).show();
+			Toast.makeText(webView.getContext(), "Start" + iu, Toast.LENGTH_LONG).show();
 			iu.StartInventoryStream();
 			try {
 				Thread.sleep(waittime);
