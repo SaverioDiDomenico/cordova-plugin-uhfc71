@@ -27,7 +27,7 @@ public class Uhfc71 extends CordovaPlugin {
 			 Context context = this.cordova.getActivity().getApplicationContext();
 			
 			InventoryUhf iu = new InventoryUhf(context, txpower);
-			/*
+			
 			iu.StartInventoryStream();
 			try {
 				Thread.sleep(waittime);
@@ -35,7 +35,7 @@ public class Uhfc71 extends CordovaPlugin {
 
 			}
 			iu.StopInventoryStream();
-			*/
+			
 			
 			String result = "NO-TAGS";
 
