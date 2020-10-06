@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import com.nordicid.nurapi.NurApi;
 import com.rscja.deviceapi.RFIDWithUHF;
 import android.content.Context;
 import android.os.Handler;
