@@ -54,7 +54,7 @@ public class InventoryUhf {
 		} catch (Exception ex) {
 			Toast.makeText(context, ex.toString(), Toast.LENGTH_LONG).show();
 		}
-		oast.makeText(context, "" + mReader, Toast.LENGTH_LONG).show();
+		Toast.makeText(context, "" + mReader, Toast.LENGTH_LONG).show();
 		if (mReader != null) {
 			mReader.init();
 		}
