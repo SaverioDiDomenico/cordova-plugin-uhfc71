@@ -29,13 +29,13 @@ public class InventoryUhf {
 		loopFlag = false;
 		listaTags = new ArrayList<String>();
 
-		Toast.makeText(context, "instanzio", Toast.LENGTH_LONG).show();
+		//Toast.makeText(context, "instanzio", Toast.LENGTH_LONG).show();
 		try {
 			mReader = RFIDWithUHF.getInstance();
 		} catch (Exception ex) {
 			Toast.makeText(context, ex.toString(), Toast.LENGTH_LONG).show();
 		}
-		Toast.makeText(context, "potenza", Toast.LENGTH_LONG).show();
+		//Toast.makeText(context, "potenza", Toast.LENGTH_LONG).show();
 		try {
 			mReader.setPower((int) txpower);
 		} catch (Exception ex) {
@@ -187,7 +187,7 @@ public class InventoryUhf {
 			String[] res = null;
 
 			while (loopFlag) {
-
+				Toast.makeText(context, "while", Toast.LENGTH_LONG).show();
 				res = mReader.readTagFromBuffer();//.readTagFormBuffer();
 
 				if (res != null) {
