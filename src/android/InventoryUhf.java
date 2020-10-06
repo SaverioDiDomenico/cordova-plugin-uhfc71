@@ -1,4 +1,4 @@
-package android;
+package it.dynamicid;
 
 import java.util.ArrayList;
 import java.util.HashMap;
