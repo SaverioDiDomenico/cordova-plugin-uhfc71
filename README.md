@@ -1,4 +1,4 @@
-# Cordova/Phonegap Plugin to manage RFID UHF Inventory on Handheld HH83 Nordic-ID cordova-plugin-uhfnordicid
+# Cordova/Phonegap Plugin to manage RFID UHF Inventory on Handheld C71 Chainway cordova-plugin-uhfc71
 
 Whit this plugin it's possible make inventory of RFID UHF Tags or make a search of specific tag.
 It's also possible to set power of antenna before scanning.
@@ -10,22 +10,22 @@ It's also possible to set power of antenna before scanning.
 
 ### Cordova
 
-    $ cordova plugin add https://github.com/SaverioDiDomenico/cordova-plugin-uhfnordicid
+    $ cordova plugin add https://github.com/SaverioDiDomenico/cordova-plugin-uhfc71
 
 ### PhoneGap
 
-    $ phonegap plugin add https://github.com/SaverioDiDomenico/cordova-plugin-uhfnordicid
+    $ phonegap plugin add https://github.com/SaverioDiDomenico/cordova-plugin-uhfc71
 
 
 ## Uninstall
 
 ### Cordova
 
-    $ cordova plugin remove cordova-plugin-uhfnordicid
+    $ cordova plugin remove cordova-plugin-uhfc71
 
 ### PhoneGap
 
-    $ phonegap plugin remove cordova-plugin-uhfnordicid
+    $ phonegap plugin remove cordova-plugin-uhfc71
     
 # API
 
@@ -40,10 +40,10 @@ Make Inventory of Tags.
     var epcUHF = ''; //EMPTY if you  want to make full Inventory, in this case Scan Function return a String with all readed tags: For Example TAG1,TAG2,TAG3,
     //var epcUHF = 'TAG1'; //EPC of Tag that you are searching, in this case function return OK (tag is discovered) or KO (tag is not discovered)
     var waittimeUHF = 5000; //Scan duration in milliseconds (maximum 20000)
-    var powerUHF = 10; //Possible values from 8 to 27
+    var powerUHF = 10; //Possible values from 5 to 30
     
-    var uhfnordicid = new Uhfnordicid();
-    uhfnordicid.scan(
+    var uhfc71 = new Uhfc71();
+    uhfc71.scan(
                 epcUHF, waittimeUHF, powerUHF,
                 function(msg) {
                     console.log(msg); //in msg you can see result of scan NO-TAGS / LIST / OK / KO
