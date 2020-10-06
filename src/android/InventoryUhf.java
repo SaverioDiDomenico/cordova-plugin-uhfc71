@@ -42,8 +42,9 @@ public class InventoryUhf {
 			Toast.makeText(context, ex.toString(), Toast.LENGTH_LONG).show();
 		}
 
+		Toast.makeText(context, "taglist", Toast.LENGTH_LONG).show();
 		tagList = new ArrayList<HashMap<String, String>>();
-
+		Toast.makeText(context, "handler", Toast.LENGTH_LONG).show();
 		handler = new Handler() {
 
 			@Override
@@ -55,6 +56,8 @@ public class InventoryUhf {
 				//mContext.playSound(1);
 			}
 		};
+		
+		Toast.makeText(context, "fine costruttore", Toast.LENGTH_LONG).show();
 	}
 
 	public void StartInventoryStream() {
