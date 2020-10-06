@@ -36,11 +36,13 @@ public class InventoryUhf {
 			Toast.makeText(context, ex.toString(), Toast.LENGTH_LONG).show();
 		}
 		//Toast.makeText(context, "potenza", Toast.LENGTH_LONG).show();
+		/*
 		try {
 			mReader.setPower((int) txpower);
 		} catch (Exception ex) {
 			Toast.makeText(context, ex.toString(), Toast.LENGTH_LONG).show();
 		}
+		*/
 
 		Toast.makeText(context, "taglist", Toast.LENGTH_LONG).show();
 		tagList = new ArrayList<HashMap<String, String>>();
