@@ -1,25 +1,25 @@
 {
-  "name": "cordova-plugin-uhfnordicid",
+  "name": "cordova-plugin-uhfc71",
   "version": "0.0.1",
-  "description": "Cordova Rfid UHF Nordic ID Plugin",
+  "description": "Cordova Rfid UHF Chainway C71 Plugin",
   "cordova": {
-    "id": "cordova-plugin-uhfnordicid",
+    "id": "cordova-plugin-uhfc71",
     "platforms": [
       "android"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SaverioDiDomenico/cordova-plugin-uhfnordicid.git"
+    "url": "git+https://github.com/SaverioDiDomenico/cordova-plugin-uhfc71.git"
   },
   "keywords": [
     "cordova",
     "device",
     "rfid",
     "uhf",
-    "nordic",
+    "c71",
     "id",
-    "nordicid",
+    "chainway",
     "ecosystem:cordova",
     "cordova-android"
   ],
@@ -32,7 +32,7 @@
   "author": "Saverio Di Domenico",
   "license": "Apache 2.0",
   "bugs": {
-    "url": "https://github.com/SaverioDiDomenico/cordova-plugin-uhfnordicid/issues"
+    "url": "https://github.com/SaverioDiDomenico/cordova-plugin-uhfc71/issues"
   },
-  "homepage": "https://github.com/SaverioDiDomenico/cordova-plugin-uhfnordicid#readme"
+  "homepage": "https://github.com/SaverioDiDomenico/cordova-plugin-uhfc71#readme"
 }
