@@ -47,20 +47,20 @@ public class InventoryUhf {
 		loopFlag = false;
 		listaTags = new ArrayList<String>();
 
-		Toast.makeText(context, "instanzio", Toast.LENGTH_LONG).show();
+		//Toast.makeText(context, "instanzio", Toast.LENGTH_LONG).show();
 		try {
 			mReader = RFIDWithUHF.getInstance();
 			Thread.sleep(3000);
 		} catch (Exception ex) {
 			Toast.makeText(context, ex.toString(), Toast.LENGTH_LONG).show();
 		}
-		Toast.makeText(context, "" + mReader, Toast.LENGTH_LONG).show();
+		//Toast.makeText(context, "" + mReader, Toast.LENGTH_LONG).show();
 		if (mReader != null) {
 			mReader.init();
 		}
 		
 		try{
-			Thread.sleep(3000);
+			Thread.sleep(5000);
 		} catch (Exception ex) {	
 		}
 		
