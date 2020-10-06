@@ -32,10 +32,14 @@ public class InventoryUhf {
 		//Toast.makeText(context, "instanzio", Toast.LENGTH_LONG).show();
 		try {
 			mReader = RFIDWithUHF.getInstance();
-			mReader.init();
 		} catch (Exception ex) {
 			Toast.makeText(context, ex.toString(), Toast.LENGTH_LONG).show();
 		}
+		
+		if (mReader != null) {
+			new InitTask().execute();
+		}
+		
 		//Toast.makeText(context, "potenza", Toast.LENGTH_LONG).show();
 		/*
 		try {
@@ -220,6 +224,36 @@ public class InventoryUhf {
 
 			}
 		}
+	}
+	
+		public class InitTask extends AsyncTask<String, Integer, Boolean> {
+		//ProgressDialog mypDialog;
+		
+		@Override
+		protected Boolean doInBackground(String... params) {
+			// TODO Auto-generated method stub
+			return mReader.init();
+		}
+
+		@Override
+		protected void onPostExecute(Boolean result) {
+			super.onPostExecute(result);
+
+			//mypDialog.cancel();
+		}
+
+		@Override
+		protected void onPreExecute() {
+			// TODO Auto-generated method stub
+			super.onPreExecute();
+
+			//mypDialog = new ProgressDialog(UHFMainActivity.this);
+			//mypDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+			//mypDialog.setMessage("init...");
+			//mypDialog.setCanceledOnTouchOutside(false);
+			//mypDialog.show();
+		}
+
 	}
 
 }
