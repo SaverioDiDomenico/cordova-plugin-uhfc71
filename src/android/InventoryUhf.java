@@ -187,7 +187,7 @@ public class InventoryUhf {
 			String[] res = null;
 
 			while (loopFlag) {
-				Toast.makeText(context, "while", Toast.LENGTH_LONG).show();
+				Toast.makeText(mContext, "while", Toast.LENGTH_LONG).show();
 				res = mReader.readTagFromBuffer();//.readTagFormBuffer();
 
 				if (res != null) {
