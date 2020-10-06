@@ -44,9 +44,9 @@ public class InventoryUhf {
 		}
 		*/
 
-		Toast.makeText(context, "taglist", Toast.LENGTH_LONG).show();
+		//Toast.makeText(context, "taglist", Toast.LENGTH_LONG).show();
 		tagList = new ArrayList<HashMap<String, String>>();
-		Toast.makeText(context, "handler", Toast.LENGTH_LONG).show();
+		//Toast.makeText(context, "handler", Toast.LENGTH_LONG).show();
 		handler = new Handler() {
 
 			@Override
@@ -59,18 +59,19 @@ public class InventoryUhf {
 			}
 		};
 		
-		Toast.makeText(context, "fine costruttore", Toast.LENGTH_LONG).show();
+		//Toast.makeText(context, "fine costruttore", Toast.LENGTH_LONG).show();
 	}
 
 	public void StartInventoryStream() {
 
 		if (mReader.startInventoryTag((byte)0, (byte)0)) {
-
+	
 			loopFlag = true;
 
 			new TagThread(80).start();
+			Toast.makeText(mContext, "Start Inventory", Toast.LENGTH_LONG).show();
 		} else {
-			// messaggio di errore
+			Toast.makeText(mContext, "errore1", Toast.LENGTH_LONG).show();
 		}
 	}
 
