@@ -59,7 +59,7 @@ public class InventoryUhf {
 			}
 		};
 		
-		//Toast.makeText(context, "fine costruttore", Toast.LENGTH_LONG).show();
+		Toast.makeText(context, "fine costruttore" + mReader, Toast.LENGTH_LONG).show();
 	}
 
 	public void StartInventoryStream() {
