@@ -10,6 +10,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
 import android.widget.Toast;
+import android.os.AsyncTask;
 
 public class InventoryUhf {
 
