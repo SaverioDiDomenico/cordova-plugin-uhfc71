@@ -19,7 +19,7 @@
         </config-file>
 	    	<source-file src="src/android/Uhfc71.java" target-dir="src/it/dynamicid/uhfc71" />
 	    	<source-file src="src/android/InventoryUhf.java" target-dir="src/it/dynamicid/uhfc71" />
-	    	<lib-file src="src/cw-deviceapi20180324.jar" />
+	    	<lib-file src="src/cw-deviceapi20180323.jar" />
 		<lib-file src="src/IGLBarDecoder.jar" />
 	        <lib-file src="src/xUtils-2.5.5.jar" />
     </platform>
