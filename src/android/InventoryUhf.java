@@ -41,7 +41,7 @@ public class InventoryUhf {
 	private ArrayList<HashMap<String, String>> tagList;
 
 
-	public InventoryUhf(Context context, long txpower) {
+	public InventoryUhf(Context context, long txpower, Uhfc71 c71) {
 		super();
 		mContext = context;
 		loopFlag = false;
@@ -56,7 +56,7 @@ public class InventoryUhf {
 		}
 		//Toast.makeText(context, "" + mReader, Toast.LENGTH_LONG).show();
 		if (mReader != null) {
-			cordova.getThreadPool().execute(new Runnable() {
+			c71.cordova.getThreadPool().execute(new Runnable() {
                 public void run() {
                   init();
                 }
