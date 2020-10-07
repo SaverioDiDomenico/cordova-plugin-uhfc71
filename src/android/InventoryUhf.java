@@ -56,7 +56,11 @@ public class InventoryUhf {
 		}
 		//Toast.makeText(context, "" + mReader, Toast.LENGTH_LONG).show();
 		if (mReader != null) {
-			mReader.init();
+			cordova.getThreadPool().execute(new Runnable() {
+                public void run() {
+                  init();
+                }
+              });
 		}
 		
 		try{
@@ -90,6 +94,17 @@ public class InventoryUhf {
 		
 		Toast.makeText(context, "fine costruttore" + mReader, Toast.LENGTH_LONG).show();
 	}
+	
+	  private void init() {
+		  boolean es = false;
+		try {			
+			es = this.mReader.init();			
+		} catch (Exception e) {
+			es = false;
+		}
+		
+		Toast.makeText(mContext, "Esito Init " + es, Toast.LENGTH_LONG).show();
+	  }
 
 	public void StartInventoryStream() {
 
