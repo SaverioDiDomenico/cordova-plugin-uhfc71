@@ -28,8 +28,9 @@ public class Uhfc71 extends CordovaPlugin {
 			
 			Toast.makeText(webView.getContext(), "Costruttore", Toast.LENGTH_LONG).show();
 			
-			/*
+			
 			InventoryUhf iu = new InventoryUhf(context, txpower);
+			/*
 			Toast.makeText(webView.getContext(), "Start" + iu, Toast.LENGTH_LONG).show();
 			iu.StartInventoryStream();
 			try {
