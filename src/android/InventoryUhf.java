@@ -48,28 +48,25 @@ public class InventoryUhf {
 		listaTags = new ArrayList<String>();
 		String stato = "0";		
 		
-		try{
-			Thread.sleep(5000);
-		} catch (Exception ex) {	
-		}
-		
+		boolean sav = false;
 		
 		try {
 			mReader = RFIDWithUHF.getInstance();
-			mReader.init();
+			sav = mReader.init();
 		} catch (Exception ex) {
 			//Toast.makeText(context, ex.toString(), Toast.LENGTH_LONG).show();
 			stato += ex.toString();
 		}
 		//Toast.makeText(context, "1", Toast.LENGTH_LONG).show();
-		stato += "1";
-		
+		//stato += "1";
+		/*
 		try{
 			Thread.sleep(5000);
 		} catch (Exception ex) {	
 		}
+		*/
 		
-		stato += "2";
+		//stato += "2";
 		
 		
 		
@@ -84,7 +81,7 @@ public class InventoryUhf {
 		}
 		*/
 		
-		Toast.makeText(context, stato, Toast.LENGTH_LONG).show();
+		Toast.makeText(context, sav, Toast.LENGTH_LONG).show();
 		
 		
 
