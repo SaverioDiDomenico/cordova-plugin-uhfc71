@@ -82,7 +82,7 @@ public class InventoryUhf {
 		}
 		*/
 		
-		Toast.makeText(context, stao+"", Toast.LENGTH_LONG).show();
+		Toast.makeText(context, stato+"", Toast.LENGTH_LONG).show();
 		
 		
 
