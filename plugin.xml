@@ -21,7 +21,19 @@
 	    	<source-file src="src/android/InventoryUhf.java" target-dir="src/it/dynamicid/uhfc71" />
 	    
 	    <lib-file src="src/cw-deviceapi20191022.jar" />	    
-	    <lib-file src="src/armeabi/libDeviceAPI.so"/>
+	        
+	    <lib-file src="src/armeabi/libDeviceAPI.so" target="jniLibs/armeabi/libDeviceAPI.so"/>
+	    <lib-file src="src/armeabi/libSDL.so" target="jniLibs/armeabi/libSDL.so"/>
+	    <lib-file src="src/armeabi/libIAL.so" target="jniLibs/armeabi/libIAL.so"/>
+	    <lib-file src="src/armeabi/libbarcodereader43.so" target="jniLibs/armeabi/libbarcodereader43.so"/>
+	    <lib-file src="src/armeabi/libHsmKil.so" target="jniLibs/armeabi/libHsmKil.so"/>
+	    <lib-file src="src/armeabi/libHSMDecoderAPI.so" target="jniLibs/armeabi/libHSMDecoderAPI.so"/>
+	    <lib-file src="src/armeabi/libHHPScanInterface.so" target="jniLibs/armeabi/libHHPScanInterface.so"/>
+	    <lib-file src="src/armeabi/libbarcodereader.so" target="jniLibs/armeabi/libbarcodereader.so"/>
+	    <lib-file src="src/armeabi/libbarcodereader44.so" target="jniLibs/armeabi/libbarcodereader44.so"/>
+	    
+	    
+	    <!--lib-file src="src/armeabi/libDeviceAPI.so"/>
 	    <lib-file src="src/armeabi/libSDL.so"/>
 	    <lib-file src="src/armeabi/libIAL.so"/>
 	    <lib-file src="src/armeabi/libbarcodereader43.so"/>
@@ -29,7 +41,7 @@
 	    <lib-file src="src/armeabi/libHSMDecoderAPI.so"/>
 	    <lib-file src="src/armeabi/libHHPScanInterface.so"/>
 	    <lib-file src="src/armeabi/libbarcodereader.so"/>
-	    <lib-file src="src/armeabi/libbarcodereader44.so"/>
+	    <lib-file src="src/armeabi/libbarcodereader44.so"/-->
 	    
 	    	
 	    <!--lib-file src="src/cw-deviceapi20191022.jar" target-dir="libs"/>
