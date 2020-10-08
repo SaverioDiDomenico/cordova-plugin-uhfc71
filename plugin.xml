@@ -17,20 +17,30 @@
                 <param name="android-package" value="it.dynamicid.Uhfc71"/>
             </feature>
         </config-file>
+	    
+	<config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.CAMERA"/>
+            <uses-permission android:name="android.permission.FLASHLIGHT"/>
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+            <uses-feature android:name="android.hardware.camera" android:required="true"/>
+        </config-file>
+	    
+	    
 	    	<source-file src="src/android/Uhfc71.java" target-dir="src/it/dynamicid/uhfc71" />
 	    	<source-file src="src/android/InventoryUhf.java" target-dir="src/it/dynamicid/uhfc71" />
 	    
 	    <lib-file src="src/cw-deviceapi20191022.jar" />	    
 	        
-	    <lib-file src="src/armeabi/libDeviceAPI.so" target="jniLibs/armeabi/libDeviceAPI.so"/>
-	    <lib-file src="src/armeabi/libSDL.so" target="jniLibs/armeabi/libSDL.so"/>
-	    <lib-file src="src/armeabi/libIAL.so" target="jniLibs/armeabi/libIAL.so"/>
-	    <lib-file src="src/armeabi/libbarcodereader43.so" target="jniLibs/armeabi/libbarcodereader43.so"/>
-	    <lib-file src="src/armeabi/libHsmKil.so" target="jniLibs/armeabi/libHsmKil.so"/>
-	    <lib-file src="src/armeabi/libHSMDecoderAPI.so" target="jniLibs/armeabi/libHSMDecoderAPI.so"/>
-	    <lib-file src="src/armeabi/libHHPScanInterface.so" target="jniLibs/armeabi/libHHPScanInterface.so"/>
-	    <lib-file src="src/armeabi/libbarcodereader.so" target="jniLibs/armeabi/libbarcodereader.so"/>
-	    <lib-file src="src/armeabi/libbarcodereader44.so" target="jniLibs/armeabi/libbarcodereader44.so"/>
+	    <lib-file src="src/armeabi/libDeviceAPI.so" arch="device"/>
+	    <lib-file src="src/armeabi/libSDL.so" arch="device"/>
+	    <lib-file src="src/armeabi/libIAL.so" arch="device"/>
+	    <lib-file src="src/armeabi/libbarcodereader43.so" arch="device"/>
+	    <lib-file src="src/armeabi/libHsmKil.so" arch="device"/>
+	    <lib-file src="src/armeabi/libHSMDecoderAPI.so" arch="device"/>
+	    <lib-file src="src/armeabi/libHHPScanInterface.so" arch="device"/>
+	    <lib-file src="src/armeabi/libbarcodereader.so" arch="device"/>
+	    <lib-file src="src/armeabi/libbarcodereader44.so" arch="device"/>
 	    
 	    
 	    <!--lib-file src="src/armeabi/libDeviceAPI.so"/>
