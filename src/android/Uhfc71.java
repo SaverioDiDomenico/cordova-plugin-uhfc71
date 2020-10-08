@@ -27,6 +27,8 @@ public class Uhfc71 extends CordovaPlugin {
 			 Context context = this.cordova.getActivity().getApplicationContext();
 			
 			Toast.makeText(webView.getContext(), "Costruttore", Toast.LENGTH_LONG).show();
+			
+			/*
 			InventoryUhf iu = new InventoryUhf(context, txpower);
 			Toast.makeText(webView.getContext(), "Start" + iu, Toast.LENGTH_LONG).show();
 			iu.StartInventoryStream();
@@ -37,12 +39,12 @@ public class Uhfc71 extends CordovaPlugin {
 			}
 			Toast.makeText(webView.getContext(), "Stop", Toast.LENGTH_LONG).show();
 			iu.StopInventoryStream();
-			
+			*/
 			
 			String result = "NO-TAGS";
 
 			if(epc.isEmpty()) {
-				result = iu.GetTags();
+				//result = iu.GetTags();
 				//result = iu.Inv();
 				
 				if(result.isEmpty()){
