@@ -52,13 +52,15 @@ public class InventoryUhf {
 			mReader.init();
 		} catch (Exception ex) {
 		}
-		
+		Toast.makeText(context, "1", Toast.LENGTH_LONG).show();
 		
 		
 		try{
-			Thread.sleep(1000);
+			Thread.sleep(5000);
 		} catch (Exception ex) {	
 		}
+		
+		Toast.makeText(context, "2", Toast.LENGTH_LONG).show();
 						
 		try {
 			mReader.setPower((int) txpower);
