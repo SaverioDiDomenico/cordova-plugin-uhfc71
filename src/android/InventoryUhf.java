@@ -71,15 +71,20 @@ public class InventoryUhf {
 		
 		stato += "2";
 		
+		
+		
+		
+		try {
+			//mReader.setPower((int) txpower);
+			int sav = mReader.getPower();
+			stato += sav;
+			
+		} catch (Exception ex) {
+			stato += ex.toString();
+		}
+		
 		Toast.makeText(context, stato, Toast.LENGTH_LONG).show();
 		
-		/*
-		try {
-			mReader.setPower((int) txpower);
-		} catch (Exception ex) {
-			Toast.makeText(context, ex.toString(), Toast.LENGTH_LONG).show();
-		}
-		*/
 		
 
 		tagList = new ArrayList<HashMap<String, String>>();
