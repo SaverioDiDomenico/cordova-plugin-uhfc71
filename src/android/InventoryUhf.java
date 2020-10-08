@@ -51,10 +51,13 @@ public class InventoryUhf {
 		try {
 			mReader = RFIDWithUHF.getInstance();
 			Thread.sleep(3000);
+			mReader.init();
 		} catch (Exception ex) {
 			Toast.makeText(context, ex.toString(), Toast.LENGTH_LONG).show();
 		}
 		//Toast.makeText(context, "" + mReader, Toast.LENGTH_LONG).show();
+		
+		/*
 		if (mReader != null) {
 			c71.cordova.getThreadPool().execute(new Runnable() {
                 public void run() {
@@ -62,6 +65,8 @@ public class InventoryUhf {
                 }
               });
 		}
+		
+		*/
 		
 		try{
 			Thread.sleep(5000);
