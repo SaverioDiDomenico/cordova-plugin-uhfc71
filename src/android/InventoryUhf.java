@@ -46,8 +46,7 @@ public class InventoryUhf {
 		mContext = context;
 		loopFlag = false;
 		listaTags = new ArrayList<String>();
-		Toast.makeText(context, "0", Toast.LENGTH_LONG).show();
-		
+		String stato = "0";		
 		
 		try{
 			Thread.sleep(5000);
@@ -59,23 +58,28 @@ public class InventoryUhf {
 			mReader = RFIDWithUHF.getInstance();
 			//mReader.init();
 		} catch (Exception ex) {
-			Toast.makeText(context, ex.toString(), Toast.LENGTH_LONG).show();
+			//Toast.makeText(context, ex.toString(), Toast.LENGTH_LONG).show();
+			stato += ex.toString();
 		}
-		Toast.makeText(context, "1", Toast.LENGTH_LONG).show();
-		
+		//Toast.makeText(context, "1", Toast.LENGTH_LONG).show();
+		stato += "1";
 		
 		try{
 			Thread.sleep(5000);
 		} catch (Exception ex) {	
 		}
 		
-		Toast.makeText(context, "2", Toast.LENGTH_LONG).show();
-						
+		stato += "2";
+		
+		Toast.makeText(context, stato, Toast.LENGTH_LONG).show();
+		
+		/*
 		try {
 			mReader.setPower((int) txpower);
 		} catch (Exception ex) {
 			Toast.makeText(context, ex.toString(), Toast.LENGTH_LONG).show();
 		}
+		*/
 		
 
 		tagList = new ArrayList<HashMap<String, String>>();
