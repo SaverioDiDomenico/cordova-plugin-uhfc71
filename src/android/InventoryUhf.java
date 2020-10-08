@@ -57,7 +57,7 @@ public class InventoryUhf {
 		}
 		//Toast.makeText(context, "" + mReader, Toast.LENGTH_LONG).show();
 		
-		/*
+		
 		if (mReader != null) {
 			c71.cordova.getThreadPool().execute(new Runnable() {
                 public void run() {
@@ -66,7 +66,7 @@ public class InventoryUhf {
               });
 		}
 		
-		*/
+		
 		
 		try{
 			Thread.sleep(5000);
