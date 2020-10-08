@@ -53,38 +53,25 @@ public class InventoryUhf {
 		try {
 			mReader = RFIDWithUHF.getInstance();
 			sav = mReader.init();
-			stato = sav + "";
 		} catch (Exception ex) {
-			//Toast.makeText(context, ex.toString(), Toast.LENGTH_LONG).show();
-			stato += ex.toString();
+
 		}
-		//Toast.makeText(context, "1", Toast.LENGTH_LONG).show();
-		//stato += "1";
+
 		/*
 		try{
 			Thread.sleep(5000);
 		} catch (Exception ex) {	
 		}
-		*/
+		*/		
 		
-		//stato += "2";
-		
-		
-		
-		/*
 		try {
-			//mReader.setPower((int) txpower);
-			int sav = mReader.getPower();
-			stato += sav;
-			
+			mReader.setPower((int) txpower);			
 		} catch (Exception ex) {
 			stato += ex.toString();
 		}
-		*/
-		
-		Toast.makeText(context, stato+"", Toast.LENGTH_LONG).show();
 		
 		
+		//Toast.makeText(context, stato+"", Toast.LENGTH_LONG).show();		
 
 		tagList = new ArrayList<HashMap<String, String>>();
 		
