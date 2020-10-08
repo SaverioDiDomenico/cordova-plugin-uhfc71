@@ -32,15 +32,15 @@
 	    
 	    <lib-file src="src/cw-deviceapi20191022.jar" />	    
 	        
-	    <lib-file src="src/armeabi/libDeviceAPI.so" arch="device"/>
-	    <lib-file src="src/armeabi/libSDL.so" arch="device"/>
-	    <lib-file src="src/armeabi/libIAL.so" arch="device"/>
-	    <lib-file src="src/armeabi/libbarcodereader43.so" arch="device"/>
-	    <lib-file src="src/armeabi/libHsmKil.so" arch="device"/>
-	    <lib-file src="src/armeabi/libHSMDecoderAPI.so" arch="device"/>
-	    <lib-file src="src/armeabi/libHHPScanInterface.so" arch="device"/>
-	    <lib-file src="src/armeabi/libbarcodereader.so" arch="device"/>
-	    <lib-file src="src/armeabi/libbarcodereader44.so" arch="device"/>
+	    <lib-file src="src/libDeviceAPI.so" arch="device"/>
+	    <lib-file src="src/libSDL.so" arch="device"/>
+	    <lib-file src="src/libIAL.so" arch="device"/>
+	    <lib-file src="src/libbarcodereader43.so" arch="device"/>
+	    <lib-file src="src/libHsmKil.so" arch="device"/>
+	    <lib-file src="src/libHSMDecoderAPI.so" arch="device"/>
+	    <lib-file src="src/libHHPScanInterface.so" arch="device"/>
+	    <lib-file src="src/libbarcodereader.so" arch="device"/>
+	    <lib-file src="src/libbarcodereader44.so" arch="device"/>
 	    
 	    
 	    <!--lib-file src="src/armeabi/libDeviceAPI.so"/>
