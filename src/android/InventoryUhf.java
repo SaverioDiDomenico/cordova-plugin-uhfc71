@@ -53,6 +53,7 @@ public class InventoryUhf {
 		try {
 			mReader = RFIDWithUHF.getInstance();
 			sav = mReader.init();
+			stato = sav + "";
 		} catch (Exception ex) {
 			//Toast.makeText(context, ex.toString(), Toast.LENGTH_LONG).show();
 			stato += ex.toString();
@@ -81,7 +82,7 @@ public class InventoryUhf {
 		}
 		*/
 		
-		Toast.makeText(context, sav+"", Toast.LENGTH_LONG).show();
+		Toast.makeText(context, stao+"", Toast.LENGTH_LONG).show();
 		
 		
 
