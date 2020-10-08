@@ -32,7 +32,7 @@ import android.os.Build;
 public class InventoryUhf {
 
 	public Context  mContext;
-	public Handler handler;	
+	//public Handler handler;	
 	public RFIDWithUHF mReader; 
 	public boolean loopFlag;
 
@@ -41,50 +41,34 @@ public class InventoryUhf {
 	private ArrayList<HashMap<String, String>> tagList;
 
 
-	public InventoryUhf(Context context, long txpower, Uhfc71 c71) {
+	public InventoryUhf(Context context, long txpower) {
 		super();
 		mContext = context;
 		loopFlag = false;
 		listaTags = new ArrayList<String>();
 
-		//Toast.makeText(context, "instanzio", Toast.LENGTH_LONG).show();
 		try {
 			mReader = RFIDWithUHF.getInstance();
-			Thread.sleep(3000);
 			mReader.init();
 		} catch (Exception ex) {
-			Toast.makeText(context, ex.toString(), Toast.LENGTH_LONG).show();
-		}
-		//Toast.makeText(context, "" + mReader, Toast.LENGTH_LONG).show();
-		
-		
-		if (mReader != null) {
-			c71.cordova.getThreadPool().execute(new Runnable() {
-                public void run() {
-                  init();
-                }
-              });
 		}
 		
 		
 		
 		try{
-			Thread.sleep(5000);
+			Thread.sleep(1000);
 		} catch (Exception ex) {	
 		}
-		
-		Toast.makeText(context, "potenza", Toast.LENGTH_LONG).show();
-		/*
+						
 		try {
 			mReader.setPower((int) txpower);
 		} catch (Exception ex) {
 			Toast.makeText(context, ex.toString(), Toast.LENGTH_LONG).show();
 		}
-		*/
+		
 
-		//Toast.makeText(context, "taglist", Toast.LENGTH_LONG).show();
 		tagList = new ArrayList<HashMap<String, String>>();
-		//Toast.makeText(context, "handler", Toast.LENGTH_LONG).show();
+		/*
 		handler = new Handler() {
 
 			@Override
@@ -96,31 +80,24 @@ public class InventoryUhf {
 				//mContext.playSound(1);
 			}
 		};
-		
-		Toast.makeText(context, "fine costruttore" + mReader, Toast.LENGTH_LONG).show();
+		*/
 	}
 	
 	  private void init() {
-		  boolean es = false;
+		boolean es = false;
 		try {			
 			es = this.mReader.init();			
 		} catch (Exception e) {
 			es = false;
 		}
-		
-		Toast.makeText(mContext, "Esito Init " + es, Toast.LENGTH_LONG).show();
 	  }
 
 	public void StartInventoryStream() {
-
-		if (mReader.startInventoryTag((byte)0, (byte)0)) {
-	
+		
+		if (mReader.startInventoryTag((byte)0, (byte)0)) {	
 			loopFlag = true;
-
-			new TagThread(80).start();
-			Toast.makeText(mContext, "Start Inventory", Toast.LENGTH_LONG).show();
+			new TagThread(10).start();
 		} else {
-			Toast.makeText(mContext, "errore1", Toast.LENGTH_LONG).show();
 		}
 	}
 
@@ -171,21 +148,14 @@ public class InventoryUhf {
 
 			if (index == -1) {
 				tagList.add(map);
-				if(!listaTags.contains(epc)) {                	
-					listaTags.add(epc);                            	
-				}
-				//LvTags.setAdapter(adapter);
-				//tv_count.setText("" + adapter.getCount());
+
 			} else {
 				int tagcount = Integer.parseInt(tagList.get(index).get("tagCount"), 10) + 1;
-
 				map.put("tagCount", String.valueOf(tagcount));
-
 				tagList.set(index, map);
-
 			}
 
-			//adapter.notifyDataSetChanged();
+
 
 		}
 	}
@@ -243,7 +213,7 @@ public class InventoryUhf {
 			String[] res = null;
 
 			while (loopFlag) {
-				Toast.makeText(mContext, "while", Toast.LENGTH_LONG).show();
+
 				res = mReader.readTagFromBuffer();//.readTagFormBuffer();
 
 				if (res != null) {
@@ -254,15 +224,18 @@ public class InventoryUhf {
 					} else {
 						strResult = "";
 					}
-					Message msg = handler.obtainMessage();
-					msg.obj = strResult + "EPC:" + mReader.convertUiiToEPC(res[1]) + "@" + res[2];
-					//Log.i("msg", strResult + "EPC:" + mReader.convertUiiToEPC(res[1]) + "@" + res[2]);
-					handler.sendMessage(msg);
+					//Message msg = handler.obtainMessage();
+					
+					String epc = mReader.convertUiiToEPC(res[1]);
+					if(!listaTags.contains(epc)) {                	
+						listaTags.add(epc);                            	
+					}						
+					//msg.obj = strResult + "EPC:" + mReader.convertUiiToEPC(res[1]) + "@" + res[2];
+					//handler.sendMessage(msg);					
 				}
 				try {
 					sleep(mBetween);
 				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 
