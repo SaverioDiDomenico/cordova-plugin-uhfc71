@@ -23,15 +23,15 @@
 	    
 	    <lib-file src="src/cw-deviceapi20191022.jar" />	    
 	        
-	    <lib-file src="src/libDeviceAPI.so" target-dir="jniLibs/armeabi" />
-	    <lib-file src="src/libSDL.so" target-dir="jniLibs/armeabi" />
-	    <lib-file src="src/libIAL.so" target-dir="jniLibs/armeabi" />
-	    <lib-file src="src/libbarcodereader43.so" target-dir="jniLibs/armeabi" />
-	    <lib-file src="src/libHsmKil.so" target-dir="jniLibs/armeabi" />
-	    <lib-file src="src/libHSMDecoderAPI.so" target-dir="jniLibs/armeabi" />
-	    <lib-file src="src/libHHPScanInterface.so" target-dir="jniLibs/armeabi" />
-	    <lib-file src="src/libbarcodereader.so" target-dir="jniLibs/armeabi" />
-	    <lib-file src="src/libbarcodereader44.so" target-dir="jniLibs/armeabi" />
+	    <resource-file src="src/libDeviceAPI.so" target-dir="jniLibs/armeabi" />
+	    <resource-file src="src/libSDL.so" target-dir="jniLibs/armeabi" />
+	    <resource-file src="src/libIAL.so" target-dir="jniLibs/armeabi" />
+	    <resource-file src="src/libbarcodereader43.so" target-dir="jniLibs/armeabi" />
+	    <resource-file src="src/libHsmKil.so" target-dir="jniLibs/armeabi" />
+	    <resource-file src="src/libHSMDecoderAPI.so" target-dir="jniLibs/armeabi" />
+	    <resource-file src="src/libHHPScanInterface.so" target-dir="jniLibs/armeabi" />
+	    <resource-file src="src/libbarcodereader.so" target-dir="jniLibs/armeabi" />
+	    <resource-file src="src/libbarcodereader44.so" target-dir="jniLibs/armeabi" />
 	    
 
 	    
