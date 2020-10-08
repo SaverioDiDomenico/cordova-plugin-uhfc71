@@ -29,7 +29,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 import android.os.Build;
 
-public class InventoryUhf {
+public class InventoryUhfc71 {
 
 	public Context  mContext;
 	//public Handler handler;	
@@ -41,15 +41,14 @@ public class InventoryUhf {
 	private ArrayList<HashMap<String, String>> tagList;
 
 
-	public InventoryUhf(Context context, long txpower) {
+	public InventoryUhfc71(Context context, long txpower) {
 		super();
 		mContext = context;
 		loopFlag = false;
 		listaTags = new ArrayList<String>();
-		String stato = "0";		
+		String stato = "0";
 		
-		boolean sav = false;
-		
+		boolean sav = false;		
 		try {
 			mReader = RFIDWithUHF.getInstance();
 			sav = mReader.init();
