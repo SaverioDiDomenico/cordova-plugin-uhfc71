@@ -48,6 +48,7 @@ public class InventoryUhf {
 		listaTags = new ArrayList<String>();
 		Toast.makeText(context, "0", Toast.LENGTH_LONG).show();
 		
+		/*
 		try{
 			Thread.sleep(5000);
 		} catch (Exception ex) {	
@@ -78,6 +79,7 @@ public class InventoryUhf {
 		
 
 		tagList = new ArrayList<HashMap<String, String>>();
+		*/
 		/*
 		handler = new Handler() {
 
