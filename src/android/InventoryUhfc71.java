@@ -29,7 +29,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 import android.os.Build;
 
-public class InventoryUhfc71 {
+public class InventoryUhf {
 
 	public Context  mContext;
 	//public Handler handler;	
@@ -41,7 +41,7 @@ public class InventoryUhfc71 {
 	private ArrayList<HashMap<String, String>> tagList;
 
 
-	public InventoryUhfc71(Context context, long txpower) {
+	public InventoryUhf(Context context, long txpower) {
 		super();
 		mContext = context;
 		loopFlag = false;
