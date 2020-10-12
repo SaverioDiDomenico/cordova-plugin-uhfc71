@@ -70,7 +70,7 @@ public class InventoryUhfc71 {
 		}
 		
 		
-		Toast.makeText(context, sav+"", Toast.LENGTH_LONG).show();		
+		//Toast.makeText(context, sav+"", Toast.LENGTH_LONG).show();		
 
 		tagList = new ArrayList<HashMap<String, String>>();
 		
