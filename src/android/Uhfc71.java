@@ -36,6 +36,9 @@ public class Uhfc71 extends CordovaPlugin {
 							
 			//this.iu = new InventoryUhfc71(context, txpower);			
 			
+			this.iu.listaTags = new ArrayList<String>();
+			this.iu.tagList = new ArrayList<HashMap<String, String>>();
+			
 			this.iu.StartInventoryStream();
 			try {
 				Thread.sleep(waittime);
