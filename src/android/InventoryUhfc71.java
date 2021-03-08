@@ -36,9 +36,9 @@ public class InventoryUhfc71 {
 	public RFIDWithUHF mReader; 
 	public boolean loopFlag;
 
-	List<String> listaTags;
+	public List<String> listaTags;
 	private HashMap<String, String> map;
-	private ArrayList<HashMap<String, String>> tagList;
+	public ArrayList<HashMap<String, String>> tagList;
 
 
 	public InventoryUhfc71(Context context, long txpower) {
@@ -101,8 +101,8 @@ public class InventoryUhfc71 {
 
 	public void StartInventoryStream() {
 		
-		listaTags = new ArrayList<String>();
-		tagList = new ArrayList<HashMap<String, String>>();
+		this.listaTags = new ArrayList<String>();
+		this.tagList = new ArrayList<HashMap<String, String>>();
 		
 		if (mReader.startInventoryTag((byte)0, (byte)0)) {	
 			loopFlag = true;
