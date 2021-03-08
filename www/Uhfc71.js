@@ -16,6 +16,18 @@ Uhfc71.prototype.scan = function(epc, waittime, txpower, onSuccess, onError) {
     exec(successCallback, errorCallback, 'Uhfc71', 'scan', [epc, waittime, txpower]);
 };
 
+Uhfc71.prototype.inizializzazione = function(epc, waittime, txpower, onSuccess, onError) {
+    var errorCallback = function(obj) {
+        onError(obj);
+    };
+
+    var successCallback = function(obj) {
+        onSuccess(obj);
+    };
+
+    exec(successCallback, errorCallback, 'Uhfc71', 'inizializzazione', [epc, waittime, txpower]);
+};
+
 if (typeof module != 'undefined' && module.exports) {
     module.exports = Uhfc71;
 }
