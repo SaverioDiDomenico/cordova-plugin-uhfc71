@@ -9,6 +9,7 @@ import android.content.Context;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Uhfc71 extends CordovaPlugin {
