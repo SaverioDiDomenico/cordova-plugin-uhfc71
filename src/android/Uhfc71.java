@@ -12,10 +12,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Uhfc71 extends CordovaPlugin {
+	
+	public InventoryUhfc71 iu;
+	
 	@Override
 	public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 		if ("scan".equals(action)) {
 			scan(args.getString(0), args.getLong(1), args.getLong(2), callbackContext);
+			return true;
+		}
+		
+		if ("inizializzazione".equals(action)) {
+			inizializzazione(args.getString(0), args.getLong(1), args.getLong(2), callbackContext);
 			return true;
 		}
 
@@ -25,25 +33,22 @@ public class Uhfc71 extends CordovaPlugin {
 	private void scan(String epc, long waittime, long txpower, CallbackContext callbackContext) {
 		try {
 			 Context context = this.cordova.getActivity().getApplicationContext();
+							
+			//this.iu = new InventoryUhfc71(context, txpower);			
 			
-			//Toast.makeText(webView.getContext(), "Costruttore", Toast.LENGTH_LONG).show();			
-			InventoryUhfc71 iu = new InventoryUhfc71(context, txpower);			
-			//Toast.makeText(webView.getContext(), "Start" + iu, Toast.LENGTH_LONG).show();
-			iu.StartInventoryStream();
+			this.iu.StartInventoryStream();
 			try {
 				Thread.sleep(waittime);
 			} catch (Exception e) {
 
 			}
-			//Toast.makeText(webView.getContext(), "Stop", Toast.LENGTH_LONG).show();
-			iu.StopInventoryStream();
+			this.iu.StopInventoryStream();
 			
 			
 			String result = "NO-TAGS";
 
 			if(epc.isEmpty()) {
-				result = iu.GetTags();
-				//result = iu.Inv();
+				result = this.iu.GetTags();
 				
 				if(result.isEmpty()){
 					result = "NO-TAGS";
@@ -52,7 +57,7 @@ public class Uhfc71 extends CordovaPlugin {
 				
 								
 			}else {
-				//result = iu.GetTags();
+
 				String tags[] = result.split(",");
 				List<String> lista = new ArrayList<String>();
 
@@ -68,8 +73,6 @@ public class Uhfc71 extends CordovaPlugin {
 
 			}
 
-
-			//Toast.makeText(webView.getContext(), iu.mUiResultMsg, Toast.LENGTH_LONG).show();
 			callbackContext.success(result);
 
 		} catch (Exception e) {
@@ -78,4 +81,18 @@ public class Uhfc71 extends CordovaPlugin {
 
 
 	}
+	
+	
+	private void inizializzazione(String epc, long waittime, long txpower, CallbackContext callbackContext) {
+		try {
+			Context context = this.cordova.getActivity().getApplicationContext();							
+			this.iu = new InventoryUhfc71(context, txpower);			
+			
+		} catch (Exception e) {
+			callbackContext.error(e.toString());
+		}
+
+
+	}	
+	
 }
