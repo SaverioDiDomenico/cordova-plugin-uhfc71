@@ -120,7 +120,7 @@ public class InventoryUhfc71 {
 
 			if (mReader.stopInventory()) {
 				//Stop OK
-				mReader.free();
+				//mReader.free();
 			} else {
 				//Stop KO
 
