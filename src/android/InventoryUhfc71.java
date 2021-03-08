@@ -46,6 +46,7 @@ public class InventoryUhfc71 {
 		mContext = context;
 		loopFlag = false;
 		listaTags = new ArrayList<String>();
+		tagList = new ArrayList<HashMap<String, String>>();
 		String stato = "0";
 		
 		boolean sav = false;		
@@ -72,7 +73,7 @@ public class InventoryUhfc71 {
 		
 		//Toast.makeText(context, sav+"", Toast.LENGTH_LONG).show();		
 
-		tagList = new ArrayList<HashMap<String, String>>();
+		
 		
 		/*
 		handler = new Handler() {
@@ -99,6 +100,9 @@ public class InventoryUhfc71 {
 	  }
 
 	public void StartInventoryStream() {
+		
+		listaTags = new ArrayList<String>();
+		tagList = new ArrayList<HashMap<String, String>>();
 		
 		if (mReader.startInventoryTag((byte)0, (byte)0)) {	
 			loopFlag = true;
