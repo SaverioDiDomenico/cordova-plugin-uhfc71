@@ -31,6 +31,7 @@ It's also possible to set power of antenna before scanning.
 
 ## Methods
 
+- inizializzazione
 - scan
 
 ## scan
@@ -43,6 +44,16 @@ Make Inventory of Tags.
     var powerUHF = 10; //Possible values from 5 to 30
     
     var uhfc71 = new Uhfc71();
+    
+    //Initial Initialization
+    uhfc71.inizializzazione(
+			epcUHF, waittimeUHF, powerUHF,
+			function(msg) {},
+			function(err) {
+				console.log(err);
+			}
+	);
+    
     uhfc71.scan(
                 epcUHF, waittimeUHF, powerUHF,
                 function(msg) {
