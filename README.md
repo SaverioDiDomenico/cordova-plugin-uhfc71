@@ -15,6 +15,12 @@ It's also possible to set power of antenna before scanning.
 ### PhoneGap
 
     $ phonegap plugin add https://github.com/SaverioDiDomenico/cordova-plugin-uhfc71
+    
+### Notes    
+    Check that the files with the .so extension, contained in the "src" folder,
+    are copied to your project folder
+    platforms \ android \ app \ src \ main \ jniLibs \ armeabi \
+    otherwise copy them by hand
 
 
 ## Uninstall
